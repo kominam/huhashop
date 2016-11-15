@@ -307,7 +307,7 @@ img.img-head {
 }
 .icon:hover .fa-facebook,
 .icon:hover .fa-twitter,
-.icon:hover .fa-pinterest-p,
+.icon:hover .fa-youtube,
 .icon:hover .fa-dribbble {
 	color: white;
 }
@@ -1783,7 +1783,7 @@ a#myTabDrop1 {
     border: none;
     border-bottom: none;
     outline: none;
-    color: #999;
+    color: #2E2323;
     float: left;
     background: none;
 }

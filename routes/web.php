@@ -51,6 +51,14 @@ Route::get('/hold', ['as' => 'hold', function () {
   return view('frontend.pages.hold');
 }]);
 
-Route::get('/login', ['as' => 'login', function () {
-  return view('frontend.pages.login');
+Route::get('/shipping', ['as' => 'shipping', function () {
+  return view('frontend.pages.shipping');
 }]);
+
+Route::get('/register', ['as' => 'register', function () {
+  return view('frontend.pages.register');
+}]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

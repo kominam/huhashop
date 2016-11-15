@@ -17,11 +17,10 @@
     <!-- Custom Theme files -->
     <link href="{{url('frontend/css/style.css')}}" rel='stylesheet' type='text/css' />
     <!-- js -->
-    <script src="{{url('frontend/js/jquery-1.11.1.min.js')}}"></script>
+   <script src="{{ elixir('js/frontend/general.js') }}"></script>
     <!-- //js -->
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="{{url('frontend/js/move-top.js')}}"></script>
-    <script type="text/javascript" src="{{url('frontend/js/easing.js')}}"></script>
+   
     <script type="text/javascript">
       jQuery(document).ready(function($) {
         $(".scroll").click(function(event){
@@ -35,7 +34,7 @@
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
     <!--- start-rate---->
-    <script src="{{url('frontend/js/jstarbox.js')}}"></script>
+
     <link rel="stylesheet" href="{{url('frontend/css/jstarbox.css')}}" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
       jQuery(function() {
@@ -62,9 +61,9 @@
   </head>
 
 <body>
-  @include('frontend.blocks.top_block')
+  @include('frontend._partials.top_block')
   @yield('content')
-  @include('frontend.blocks.bottom_block')
+  @include('frontend._partials.bottom_block')
 
   <!-- smooth scrolling -->
   <script type="text/javascript">

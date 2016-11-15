@@ -17,3 +17,20 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
 });
+elixir(function(mix) {
+    mix.scripts(['frontend/jquery-1.11.1.min.js', 
+    	'frontend/move-top.js', 
+    	'frontend/easing.js',
+    	'frontend/jstarbox.js'
+    	],
+    	'public/js/frontend/general.js');
+});
+elixir(function(mix) {
+    mix.styles([
+        'frontend/bootstrap.css',
+        'frontend/font-awesome.css',
+        'frontend/jstarbox.css',
+        'frontend/style.css'
+    ],
+    	'public/css/frontend/general.css');
+});
