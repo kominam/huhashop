@@ -55,9 +55,6 @@ Route::get('/shipping', ['as' => 'shipping', function () {
   return view('frontend.pages.shipping');
 }]);
 
-Route::get('/register', ['as' => 'register', function () {
-  return view('frontend.pages.register');
-}]);
 
 Auth::routes();
 
