@@ -55,7 +55,10 @@ Route::get('/shipping', ['as' => 'shipping', function () {
   return view('frontend.pages.shipping');
 }]);
 
+Route::post('/contact',['as'=>'contact.send', 'uses' => 'ContactController@sendContact']);
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+

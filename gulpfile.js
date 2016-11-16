@@ -34,3 +34,9 @@ elixir(function(mix) {
     ],
     	'public/css/frontend/general.css');
 });
+elixir(function(mix) {
+    mix.styles('././bower_components/sweetalert/dist/sweetalert.css','public/css/frontend/sweetalert.css');
+});
+elixir(function(mix) {
+    mix.scripts('././bower_components/sweetalert/dist/sweetalert.min.js','public/js/frontend/sweetalert.js');
+});

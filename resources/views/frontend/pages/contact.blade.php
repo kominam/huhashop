@@ -1,5 +1,25 @@
 @extends('frontend.pages.master')
 @section('content')
+@if (session('statusSendContact')=='success')
+  <script type="text/javascript">
+  swal({
+    title: "Success!",
+    text: "Thanks you !",
+    type: "success",
+    timer:2000,
+    confirmButtonText: "OK"
+  });
+  </script>
+@elseif(session('statusSendContact')=='error')
+  <script type="text/javascript">
+    swal({
+    title: "Whoops!",
+    text: "Something went wrong !",
+    type: "error",
+    confirmButtonText: "OK"
+  });
+  </script>
+@endif
  <!--banner-->
 <div class="banner-top">
   <div class="container">
@@ -46,14 +66,19 @@
             </ul>
             <div class="resp-tabs-container hor_1">
               <div>
-                <form action="#" method="post">
-                  <input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-                  <input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                  <textarea name="Message..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                <form action="{{ route('contact.send') }}" method="post">
+                {!! csrf_field() !!}
+                  <input type="text" value="Name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                  <input type="email" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                   <input type="text" value="Subject" name="subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
+                  <textarea name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+                  {!!captcha_img()!!}
+                  <input type="text" name="captcha" value="captcha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Captcha';}" required="">
                   <input type="submit" value="Submit" >
                 </form>
               </div>
               <div>
+              <br>
                 <div class="map-grid">
                 <h5>Our Branches</h5>
                   <ul>

@@ -58,6 +58,8 @@
       });
     </script>
     <!---//End-rate---->
+     <link rel="stylesheet" href="{{ elixir('css/frontend/sweetalert.css') }}">
+    <script src="{{ elixir('js/frontend/sweetalert.js') }}"></script>
   </head>
 
 <body>
