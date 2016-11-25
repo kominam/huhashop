@@ -70,6 +70,37 @@
         quantity: quantity,
         image: image
       });
+
+      $(document).ready(function() {
+            $.ajaxSetup({
+               headers: {
+                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+               }
+             });
+               $.ajax({
+                   url:'/your-cart/addItem',
+                   type: "post",
+                   data: {'product_id': id, 'qty': quantity},
+                   success: function(data) {  
+                     swal({
+                        title: "Success!",
+                        text: "Add item successful!",
+                        type: "success",
+                        timer: 1000,
+                        confirmButtonText: "OK"
+                      });
+                         },
+                          error: function () {
+                  swal({
+                      title: "Whoops!",
+                      text: "Sorry, something went wrong!",
+                      type: "error",
+                      confirmButtonText: "OK"
+                    });
+                }
+                 });
+
+       });
       setAllProducts(products);
     }
 

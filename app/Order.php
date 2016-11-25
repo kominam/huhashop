@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $table ='orders';
+    protected $fillable = ['is_paid', 'total'];
+    protected $guarded = ['user_id'];
+    public $timestamp = true;
     public function products()
     {
         return $this->morphedByMany('App\Product', 'orderable');
@@ -17,5 +21,10 @@ class Order extends Model
     public function combo_sales()
     {
         return $this->morphedByMany('App\ComboSale', 'orderable');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

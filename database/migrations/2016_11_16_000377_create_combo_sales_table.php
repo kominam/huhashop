@@ -16,13 +16,13 @@ class CreateComboSalesTable extends Migration
         Schema::create('combo_sales', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->string('description')->nullable();
             $table->integer('original_total_price');
             $table->integer('combo_sale_price');
             $table->integer('rate');
-            $table->date('from_at');
-            $table->date('end_at');
+            $table->date('began_at');
+            $table->date('ended_at');
             $table->timestamps();
         });
     }

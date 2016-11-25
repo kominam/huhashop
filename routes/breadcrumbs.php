@@ -3,7 +3,7 @@
 // Home
 Breadcrumbs::register('home', function($breadcrumbs)
 {
-    $breadcrumbs->push('Home', route('home'));
+    $breadcrumbs->push('Home', route('index'));
 });
 
 // Home > About
@@ -14,22 +14,22 @@ Breadcrumbs::register('about', function($breadcrumbs)
 });
 
 // Home > Blog
-Breadcrumbs::register('blog', function($breadcrumbs)
+Breadcrumbs::register('contact', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Blog', route('blog'));
+    $breadcrumbs->push('Contact', route('contact'));
 });
 
-// Home > Blog > [Category]
+// Home > [Category]
 Breadcrumbs::register('category', function($breadcrumbs, $category)
 {
-    $breadcrumbs->parent('blog');
-    $breadcrumbs->push($category->title, route('category', $category->id));
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push($category->name, route('category.show', $category->slug));
 });
 
-// Home > Blog > [Category] > [Page]
-Breadcrumbs::register('page', function($breadcrumbs, $page)
+// Home > [Category] > [Prpduct]
+Breadcrumbs::register('product', function($breadcrumbs, $product)
 {
-    $breadcrumbs->parent('category', $page->category);
-    $breadcrumbs->push($page->title, route('page', $page->id));
+    $breadcrumbs->parent('category', $product->category);
+    $breadcrumbs->push($product->name, route('product.show', $category->slug, $product->slug));
 });

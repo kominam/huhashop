@@ -36,21 +36,21 @@
 
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Dal</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki1.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Snacks</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki2.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Spice</h6>
@@ -78,7 +78,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Wheat</a>(500 g)</h6>
+                      <h6><a href="#">Wheat</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -100,7 +100,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Peach Halves</a>(250 g)</h6>
+                      <h6><a href="#"> Peach Halves</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -122,7 +122,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Banana</a>(1 kg)</h6>
+                      <h6><a href="#">Banana</a>(1 kg)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -144,7 +144,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Rice</a>(500 g)</h6>
+                      <h6><a href="#">Rice</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -167,7 +167,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Oil</a>(500 g)</h6>
+                      <h6><a href="#">Oil</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -189,7 +189,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Biscuits</a>(250 g)</h6>
+                      <h6><a href="#">Biscuits</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -211,7 +211,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Nuts</a>(1 kg)</h6>
+                      <h6><a href="#">Nuts</a>(1 kg)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -233,7 +233,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Rice</a>(500 g)</h6>
+                      <h6><a href="#">Rice</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -255,7 +255,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Noodles</a>(500 g)</h6>
+                      <h6><a href="#">Noodles</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -277,7 +277,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Tea</a>(250 g)</h6>
+                      <h6><a href="#">Tea</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -299,7 +299,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Seafood</a>(1 kg)</h6>
+                      <h6><a href="#">Seafood</a>(1 kg)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -321,7 +321,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Oats Idli</a>(500 g)</h6>
+                      <h6><a href="#">Oats Idli</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>

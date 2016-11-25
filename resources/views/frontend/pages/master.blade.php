@@ -8,6 +8,7 @@
     <meta property="og:title" content="Vide" />
     <meta name="keywords" content="HuHa shop, Lavender HuHa, Dried flower, Hoa Oải Hương
     , Lavender,Hoa Khô Nghệ Thuật" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <script type="application/x-javascript">
       addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
       function hideURLbar(){ window.scrollTo(0,1); }

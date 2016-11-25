@@ -36,21 +36,21 @@
 
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki6.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Clips</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki7.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Cleaning Wear</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki8.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Toothbrush</h6>
@@ -78,7 +78,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Cat Food</a>(500 g)</h6>
+                      <h6><a href="#">Cat Food</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -100,7 +100,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Safety Pins</a>(100 g)</h6>
+                      <h6><a href="#">Safety Pins</a>(100 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -122,7 +122,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Agarbatti</a>(200 g)</h6>
+                      <h6><a href="#">Agarbatti</a>(200 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -144,7 +144,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Candle Set </a>(1 pc)</h6>
+                      <h6><a href="#">Candle Set </a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -167,7 +167,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Dust Bin</a>(1 pc)</h6>
+                      <h6><a href="#">Dust Bin</a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -189,7 +189,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Hanger</a>(1 pc)</h6>
+                      <h6><a href="#"> Hanger</a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -211,7 +211,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Pet Bowl</a>(1 pc)</h6>
+                      <h6><a href="#"> Pet Bowl</a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -233,7 +233,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Tailum</a>(500 g)</h6>
+                      <h6><a href="#">Tailum</a>(500 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -255,7 +255,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Container</a>(1 pc)</h6>
+                      <h6><a href="#"> Container</a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -277,7 +277,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Scrub Sponge</a>(100 g)</h6>
+                      <h6><a href="#">Scrub Sponge</a>(100 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -299,7 +299,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Reindeer </a>(1 pc)</h6>
+                      <h6><a href="#">Reindeer </a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -321,7 +321,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Cleaner</a>(1 pc)</h6>
+                      <h6><a href="#"> Cleaner</a>(1 pc)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>

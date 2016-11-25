@@ -36,21 +36,21 @@
 
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki3.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Natural Cream</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki4.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Shaving Kit</h6>
       <p>Nam libero tempore</p>
     </div>
     <div class="col-md-4 kic-top1">
-      <a href="{{route('single')}}">
+      <a href="#">
         <img src="{{url('frontend/images/ki5.jpg')}}" class="img-responsive" alt="">
       </a>
       <h6>Makeup Kit</h6>
@@ -78,7 +78,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Baby Oil</a>(250 g)</h6>
+                      <h6><a href="#">Baby Oil</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -100,7 +100,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Soap</a>(250 g)</h6>
+                      <h6><a href="#">Soap</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -122,7 +122,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Hair Gel</a>(100 g)</h6>
+                      <h6><a href="#">Hair Gel</a>(100 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -144,7 +144,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Lotion </a>(100 g)</h6>
+                      <h6><a href="#">Lotion </a>(100 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -167,7 +167,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Shower Gel</a>(250 g)</h6>
+                      <h6><a href="#">Shower Gel</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -189,7 +189,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Hair Color</a>(250 g)</h6>
+                      <h6><a href="#">Hair Color</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -211,7 +211,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}"> Wipes</a>(300 kg)</h6>
+                      <h6><a href="#"> Wipes</a>(300 kg)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -233,7 +233,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Essential Oils</a>(200 g)</h6>
+                      <h6><a href="#">Essential Oils</a>(200 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>
@@ -255,7 +255,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Cream</a>(150 g)</h6>
+                      <h6><a href="#">Cream</a>(150 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$7.00</label><em class="item_price">$6.00</em></p>
@@ -277,7 +277,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Hair Color</a>(250 g)</h6>
+                      <h6><a href="#">Hair Color</a>(250 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$5.00</label><em class="item_price">$4.50</em></p>
@@ -299,7 +299,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Baby Care</a>(1 kg)</h6>
+                      <h6><a href="#">Baby Care</a>(1 kg)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$4.00</label><em class="item_price">$3.50</em></p>
@@ -321,7 +321,7 @@
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="{{route('single')}}">Lotion</a>(100 g)</h6>
+                      <h6><a href="#">Lotion</a>(100 g)</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>$1.00</label><em class="item_price">$0.80</em></p>

@@ -16,8 +16,8 @@ class CreateAloneSalesTable extends Migration
         Schema::create('alone_sales', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('rate')->unsinged();
-            $table->date('from_at');
-            $table->date('end_at');
+            $table->date('began_at');
+            $table->date('ended_at');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();

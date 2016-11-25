@@ -54,7 +54,7 @@
       </tr>
       <tr class="cross">
       <td class="ring-in t-data">
-        <a href="{{route('single')}}" class="at-in">
+        <a href="#" class="at-in">
           <img src="images/wi.png" class="img-responsive" alt="">
         </a>
       <div class="sed">
@@ -74,11 +74,11 @@
 
       </td>
 
-      <td class="t-data t-w3l"><a class=" add-1" href="{{route('single')}}">Add To Cart</a></td>
+      <td class="t-data t-w3l"><a class=" add-1" href="#">Add To Cart</a></td>
 
       </tr>
       <tr class="cross1">
-      <td class="t-data ring-in"><a href="{{route('single')}}" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
+      <td class="t-data ring-in"><a href="#" class="at-in"><img src="images/wi1.png" class="img-responsive" alt=""></a>
       <div class="sed">
         <h5>Sed ut perspiciatis unde</h5>
       </div>
@@ -96,11 +96,11 @@
 
       </td>
 
-      <td class="t-data t-w3l"><a class=" add-1" href="{{route('single')}}">Add To Cart</a></td>
+      <td class="t-data t-w3l"><a class=" add-1" href="#">Add To Cart</a></td>
 
       </tr>
       <tr class="cross2">
-      <td class="t-data ring-in"><a href="{{route('single')}}" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
+      <td class="t-data ring-in"><a href="#" class="at-in"><img src="images/wi2.png" class="img-responsive" alt=""></a>
       <div class="sed">
         <h5>Sed ut perspiciatis unde</h5>
       </div>
@@ -118,7 +118,7 @@
 
       </td>
 
-      <td class="t-data"><a class=" add-1" href="{{route('single')}}">Add To Cart</a></td>
+      <td class="t-data"><a class=" add-1" href="#">Add To Cart</a></td>
 
       </tr>
   </table>
