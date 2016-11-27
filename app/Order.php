@@ -12,7 +12,7 @@ class Order extends Model
     public $timestamp = true;
     public function products()
     {
-        return $this->morphedByMany('App\Product', 'orderable');
+        return $this->morphedByMany('App\Product', 'orderable')->withPivot('quantity');
     }
 
     /**

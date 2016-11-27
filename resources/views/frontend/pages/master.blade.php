@@ -13,8 +13,10 @@
       addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
       function hideURLbar(){ window.scrollTo(0,1); }
     </script>
+
     <!-- //for-mobile-apps -->
     <link href="{{url('frontend/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
+     <link rel="stylesheet" href="{{ elixir('css/frontend/jquery-typeahead.css') }}">
     <!-- Custom Theme files -->
     <link href="{{url('frontend/css/style.css')}}" rel='stylesheet' type='text/css' />
     <!-- js -->
@@ -125,5 +127,8 @@
       });
     });
   </script>
+
+  <script src="{{ elixir('js/frontend/jquery-typeahead.js') }}"></script>
+  <script type="text/javascript" src="{{url('frontend/js/search.js')}}"></script>
 </body>
 </html>

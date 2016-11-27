@@ -1,7 +1,16 @@
 @extends('frontend.pages.master')
 @section('content')
-   <!---->
-
+   <!--display when register failed-->
+@if(count($errors)>0)
+  <script>
+     swal({
+        title: "Whoops!",
+        text: "Sorry, something went wrong!",
+        type: "error",
+        confirmButtonText: "OK"
+      });
+  </script>
+@endif
      <!--banner-->
 <div class="banner-top">
   <div class="container">
@@ -22,16 +31,31 @@
             <div class="key">
               <i class="fa fa-user" aria-hidden="true"></i>
               <input  type="text" value="Username" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+              @if ($errors->has('name'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('name') }}
+                </div>
+              @endif
               <div class="clearfix"></div>
             </div>
             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <input  type="text" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+              @if ($errors->has('email'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('email') }}
+                </div>
+              @endif
               <div class="clearfix"></div>
             </div>
             <div class="key">
               <i class="fa fa-lock" aria-hidden="true"></i>
               <input  type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+              @if ($errors->has('email'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('password') }}
+                </div>
+              @endif
               <div class="clearfix"></div>
             </div>
             <div class="key">

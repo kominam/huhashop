@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use App\Product;
 use App\Category;
+use Auth;
 
 class ViewComposerServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,10 @@ class ViewComposerServiceProvider extends ServiceProvider
         View::composer('frontend._partials.modal_product', function ($view) {
             $all_products = Product::all();
             $view->with('all_products', $all_products);
+        });
+        View::composer('frontend._partials.modal_order', function ($view) {
+            $orders = Auth::user()->orders;
+            $view->with('orders', $orders);
         });
     }
 

@@ -25,11 +25,25 @@ class CartController extends Controller
             ]));
 
     }
+
+    public function update(Request $request, $rowId) {
+    	// Will update the quantity
+    	Cart::update($rowId, $request->qty); 
+    }
+    
     public function deleteItem($rowId) {
         Cart::remove($rowId);
     }
     public function removeAll() {
         Cart::destroy();
     }
+
+    public function search($productId) {
+    	$cart = Cart::content();
+		return ($cart->search(function ($cartItem, $rowId) use ($productId) {	
+		    return $cartItem->id == $productId;
+		}));
+    }
+
 
 }

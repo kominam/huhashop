@@ -36,7 +36,7 @@ class Product extends Model
 	}
   public function orders()
     {
-        return $this->morphToMany('App\Order', 'orderable');
+        return $this->morphToMany('App\Order', 'orderable')->withPivot('quantity');
     }
   public function alone_sales() 
     {

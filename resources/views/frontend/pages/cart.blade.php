@@ -3,8 +3,8 @@
 <!--banner-->
 <div class="banner-top">
   <div class="container">
-    <h3 >Wishlist</h3>
-    <h4><a href="{{route('index')}}">Home</a><label>/</label>Wishlist</h4>
+    <h3 >Your Cart</h3>
+    <h4><a href="{{route('index')}}">Home</a><label>/</label>Your Cart</h4>
     <div class="clearfix"> </div>
   </div>
 </div>
@@ -28,21 +28,7 @@
             });
           });
          </script>
-      <script>$(document).ready(function(c) {
-          $('.close2').on('click', function(c){
-            $('.cross1').fadeOut('slow', function(c){
-              $('.cross1').remove();
-            });
-            });
-          });
          </script>
-         <script>$(document).ready(function(c) {
-          $('.close3').on('click', function(c){
-            $('.cross2').fadeOut('slow', function(c){
-              $('.cross2').remove();
-            });
-            });
-          });
          </script>
  <table class="table ">
       <tr>
@@ -82,6 +68,7 @@
       @endforeach
      
   </table>
+  <a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=gemini.wind285@gmail.com&product_name={{Auth::user()->name}}{{\Carbon\Carbon::now()}}&price={{Cart::subtotal(0,'','')}}&return_url=huhashop.com&comments=Test Order"><img src="https://www.nganluong.vn/css/newhome/img/button/pay-lg.png"border="0" /></a>
      </div>
      </div>
 
