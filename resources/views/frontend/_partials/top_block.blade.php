@@ -22,9 +22,9 @@
     <div class="header-ri">
       <ul class="social-top">
         <li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
-        <li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
+        <li><a href="#" class="icon instagram"><i class="fa fa-instagram" aria-hidden="true"></i><span></span></a></li>
         <li><a href="#" class="icon pinterest"><i class="fa fa-youtube" aria-hidden="true"></i><span></span></a></li>
-        <li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
+        <li><a href="#" class="icon google plus"><i class="fa fa-google-plus" aria-hidden="true"></i><span></span></a></li>
       </ul>
     </div>
     <div class="nav-top">
