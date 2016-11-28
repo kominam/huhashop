@@ -3,9 +3,7 @@
   <div class="container">
     <div class="col-md-3 footer-grid">
       <h3>About Us</h3>
-      <p>Nam libero tempore, cum soluta nobis est eligendi
-        optio cumque nihil impedit quo minus id quod maxime
-        placeat facere possimus.</p>
+      <p>lavenderhuha shop được thành lập từ 11/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển và xây dựng được thương hiệu trong lòng quý khách ..</p>
     </div>
     <div class="col-md-3 footer-grid ">
       <h3>Menu</h3>
@@ -43,10 +41,10 @@
         <h2 ><a href="{{route('index')}}"><b>T<br>H<br>E</b>Huha Lavender<span>The Artical Lavender Shop Flower</span></a></h2>
         <p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
         <ul class="social-fo">
-          <li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/LavenderHuHa/" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#" class=" ins"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="#" class=" pin"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-          <li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+          <li><a href="#" class=" dri"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
         </ul>
         <div class=" address">
           <div class="col-md-4 fo-grid1">
@@ -56,7 +54,7 @@
               <p><i class="fa fa-phone" aria-hidden="true"></i>(+84) 0968158565</p>
           </div>
           <div class="col-md-4 fo-grid1">
-            <p><a href="mailto:huevu7121994@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>huevu7121994@gmail.com</a></p>
+            <p><a href="mailto:huha.ectl@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>huha.ectl@gmail.com</a></p>
           </div>
           <div class="clearfix"></div>
 

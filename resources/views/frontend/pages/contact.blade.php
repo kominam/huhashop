@@ -47,14 +47,11 @@
       </div>
       <div class="col-md-7 contact-left">
         <h4>Contact Information</h4>
-        <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-        aut odit aut fugit, sed quia consequuntur magni dolores eos
-        qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-        est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+        <p> Quý khách và các bạn có nhu cầu đặt hoa và các sản phẩm của shop vui lòng liên hệ :</p>
         <ul class="contact-list">
-          <li> <i class="fa fa-map-marker" aria-hidden="true"></i> 756 Global Place, New York.</li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com">mail@example.com</a></li>
-          <li> <i class="fa fa-phone" aria-hidden="true"></i>+123 2222 222</li>
+          <li> <i class="fa fa-map-marker" aria-hidden="true"></i> 109 Hoang Ngan, Thanh Xuan, Ha Noi</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:huha.ectl@gmail.com">huha.ectl@gmail.com</a></li>
+          <li> <i class="fa fa-phone" aria-hidden="true"></i>(+84) 0968158565</li>
         </ul>
         <div id="container">
           <!--Horizontal Tab-->
@@ -80,25 +77,7 @@
               <div>
               <br>
                 <div class="map-grid">
-                <h5>Our Branches</h5>
-                  <ul>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 Global Place, New York.</li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 global Place, New York.</li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <div class="map-grid">
-                  <h5>Contact Me Through</h5>
-                  <ul>
-                    <li>Mobile No : +123 456 7890</li>
-                    <li>Office No : +123 222 2222</li>
-                    <li>Home No : +123 456 7890</li>
-                    <li>Fax No : +123 456 7890</li>
-                  </ul>
-                </div>
+                
               </div>
             </div>
           </div>
