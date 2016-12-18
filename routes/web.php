@@ -23,6 +23,7 @@ Route::get('/contact', 'PageController@contact')->name('contact');
 Route::post('/contact',['as'=>'contact.send', 'uses' => 'ContactController@sendContact']);
 
 Route::get('/shipping','PageController@shipping')->name('shipping');
+Route::get('/terms','PageController@term')->name('terms');
 
 Route::get('/offer', 'PageController@offer')->name('offer');
 

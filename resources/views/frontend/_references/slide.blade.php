@@ -1,8 +1,7 @@
 <div data-vide-bg="frontend/video/video">
     <div class="container">
     <div class="banner-info">
-      <h3>It is a long established fact that a reader will be distracted by
-      the readable </h3>
+      <h3>Forgiveness is the smell that lavender gives out when you tread on it </h3>
       <div class="search-form">
       <form id="form-beer_v1" name="form-beer_v1">
         <div class="typeahead__container">

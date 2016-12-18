@@ -23,7 +23,7 @@ class ViewComposerServiceProvider extends ServiceProvider
         );*/
 
         // Using Closure based composers...
-        View::composer(['frontend.pages.index', 'layouts.include.navigation'], function ($view) {
+        View::composer('*', function ($view) {
             $all_categories =  Category::all();
             $view->with('all_categories', $all_categories);
         });

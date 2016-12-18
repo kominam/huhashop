@@ -55,6 +55,5 @@
       });
     });
   </script>
-
   <script src="{{ elixir('js/frontend/jquery-typeahead.js') }}"></script>
   <script type="text/javascript" src="{{url('frontend/js/search.js')}}"></script>

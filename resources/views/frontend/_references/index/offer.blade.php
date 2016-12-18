@@ -76,7 +76,7 @@
                     <div class="mid-2">
                       <p ><label>{{$product->price}}</label><em class="item_price">{{$product->getCurrentPrice()}}</em></p>
                         <div class="block">
-                        <div class="starbox small ghosting"> </div>
+                        <div class="starbox small ghosting">3</div>
                       </div>
                       <div class="clearfix"></div>
                     </div>

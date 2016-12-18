@@ -47,7 +47,7 @@
       </tr>
       @endforeach
   </table>
-  @include('frontend._partials.modal_order')
+  @include('frontend._references.modal_order')
      </div>
      </div>
 

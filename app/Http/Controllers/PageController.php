@@ -31,4 +31,8 @@ class PageController extends Controller
     {
     	return view('frontend.pages.offer');
     }
+    public function term()
+    {
+        return view('frontend.pages.terms');
+    }
 }
