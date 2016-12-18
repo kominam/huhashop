@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<head>
     <title>Huha Shop| Lavender Flower Shop</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,71 +62,3 @@
      <link rel="stylesheet" href="{{ elixir('css/frontend/sweetalert.css') }}">
     <script src="{{ elixir('js/frontend/sweetalert.js') }}"></script>
   </head>
-
-<body>
-  @include('frontend._partials.top_block')
-  @yield('content')
-  @include('frontend._partials.bottom_block')
-
-  <!-- smooth scrolling -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-    /*
-      var defaults = {
-      containerID: 'toTop', // fading element id
-      containerHoverID: 'toTopHover', // fading element hover id
-      scrollSpeed: 1200,
-      easingType: 'linear'
-      };
-    */
-      $().UItoTop({ easingType: 'easeOutQuart' });
-    });
-  </script>
-  <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-  <!-- //smooth scrolling -->
-  <!-- for bootstrap working -->
-  <script src="{{url('frontend/js/bootstrap.js')}}"></script>
-  <!-- //for bootstrap working -->
-  <script type='text/javascript' src="{{url('frontend/js/jquery.mycart.js')}}"></script>
-  <script type="text/javascript">
-    $(function () {
-      var goToCartIcon = function($addTocartBtn){
-        var $cartIcon = $(".my-cart-icon");
-        var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-        $addTocartBtn.prepend($image);
-        var position = $cartIcon.position();
-        $image.animate({
-          top: position.top,
-          left: position.left
-        }, 500 , "linear", function() {
-          $image.remove();
-        });
-      }
-
-      $('.my-cart-btn').myCart({
-        classCartIcon: 'my-cart-icon',
-        classCartBadge: 'my-cart-badge',
-        affixCartIcon: true,
-        checkoutCart: function(products) {
-          $.each(products, function(){
-            console.log(this);
-          });
-        },
-        clickOnAddToCart: function($addTocart){
-          goToCartIcon($addTocart);
-        },
-        getDiscountPrice: function(products) {
-          var total = 0;
-          $.each(products, function(){
-            total += this.quantity * this.price;
-          });
-          return total * 1;
-        }
-      });
-    });
-  </script>
-
-  <script src="{{ elixir('js/frontend/jquery-typeahead.js') }}"></script>
-  <script type="text/javascript" src="{{url('frontend/js/search.js')}}"></script>
-</body>
-</html>

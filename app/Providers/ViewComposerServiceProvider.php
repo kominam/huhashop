@@ -23,15 +23,15 @@ class ViewComposerServiceProvider extends ServiceProvider
         );*/
 
         // Using Closure based composers...
-        View::composer(['frontend.pages.index', 'frontend._partials.top_block'], function ($view) {
+        View::composer(['frontend.pages.index', 'layouts.include.navigation'], function ($view) {
             $all_categories =  Category::all();
             $view->with('all_categories', $all_categories);
         });
-        View::composer('frontend._partials.modal_product', function ($view) {
+        View::composer('*', function ($view) {
             $all_products = Product::all();
             $view->with('all_products', $all_products);
         });
-        View::composer('frontend._partials.modal_order', function ($view) {
+        View::composer('frontend._references.modal_order', function ($view) {
             $orders = Auth::user()->orders;
             $view->with('orders', $orders);
         });

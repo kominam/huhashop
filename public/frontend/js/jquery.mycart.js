@@ -283,6 +283,7 @@
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
+        '<a href="http://huhashop.com/your-cart"><button type="button" class="btn btn-danger">Check Out!!!</button></a>' +
         '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
 
         '</div>' +

@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
 <!--banner-->
 <div class="banner-top">

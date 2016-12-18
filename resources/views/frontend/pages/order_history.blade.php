@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
 @if(session('StatusCheckOut')==='success')
   <script>

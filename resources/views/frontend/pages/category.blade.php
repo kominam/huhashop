@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
   <!---->
 
@@ -100,6 +100,6 @@
     </div>
   </div>
   <!-- product -->
-@include('frontend._partials.modal_product')
+@include('frontend._references.modal_product')
  <!-- product -->
 @endsection

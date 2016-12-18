@@ -86,5 +86,12 @@ class Product extends Model
     
   }
 
+  public function getIsHotAttribute($value) {
+    if ( $value == 1 ) return true;
+
+    return false;
+    
+  }
+
 
 }

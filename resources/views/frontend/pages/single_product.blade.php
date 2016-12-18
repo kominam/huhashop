@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
  <!--banner-->
 <div class="banner-top">
@@ -15,7 +15,7 @@
         <div class="single-w3agile">
 
 <div id="picture-frame">
-      <img src="{{url('frontend/images/si.jpg')}}" data-src="{{url('frontend/images/si-1.jpg')}}" alt="" class="img-responsive"/>
+      <img src="{{url($product->url_image)}}" data-src="{{url($product->url_image)}}" alt="" class="img-responsive"/>
     </div>
 <script src="{{url('frontend/js/jquery.zoomtoo.js')}}"></script>
 <script>
@@ -25,9 +25,6 @@
     });
   });
 </script>
-
-
-
       </div>
       </div>
       <div class="col-md-7 single-top-left ">
@@ -52,18 +49,11 @@
           <div class="add add-3">
              <button class="btn btn-danger my-cart-btn my-cart-b" data-id="{{$product->id}}" data-name="{{$product->name}}" data-summary="summary {{$product->id}}" data-price="{{$product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($product->url_image)}}">Add to Cart</button>
           </div>
-
-
-
       <div class="clearfix"> </div>
       </div>
-
-
       </div>
        <div class="clearfix"> </div>
      </div>
-
-
   </div>
 </div>
     <!---->
@@ -122,6 +112,6 @@
           </div>
         </div>
 <!-- product -->
-@include('frontend._partials.modal_product')
+@include('frontend._references.modal_product')
  <!-- product -->
 @endsection

@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
 <!-- display error when login failed  -->
 @if(count($errors)>0)

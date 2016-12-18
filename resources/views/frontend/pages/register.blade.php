@@ -1,4 +1,4 @@
-@extends('frontend.pages.master')
+@extends('layouts.desktop')
 @section('content')
    <!--display when register failed-->
 @if(count($errors)>0)
