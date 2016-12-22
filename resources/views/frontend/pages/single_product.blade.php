@@ -15,7 +15,7 @@
         <div class="single-w3agile">
 
 <div id="picture-frame">
-      <img src="{{url($product->url_image)}}" data-src="{{url($product->url_image)}}" alt="" class="img-responsive"/>
+      <img src="{{url($product->url_image)}}" data-src="{{ url($product->zoom_image)}}" alt="" class="img-responsive"/>
     </div>
 <script src="{{url('frontend/js/jquery.zoomtoo.js')}}"></script>
 <script>
@@ -73,7 +73,7 @@
                 <div class="col-m">
                   <a href="#" data-toggle="modal" data-target="#productModal{{$product->slug}}" class="offer-img">
                     <img src="{{url($r_product->url_image)}}" class="img-responsive" alt="">
-                    @if($r_product->isAloneSaleNow())
+                    @if( $r_product->isAloneSaleNow() )
                      <div class="offer"><p><span>{{$product->getRateAloneSaleNow()->rate}} %</span></p></div>
                     @else
                        @if($r_product->is_hot==1)

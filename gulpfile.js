@@ -46,3 +46,7 @@ elixir(function(mix) {
 elixir(function(mix) {
     mix.scripts('././bower_components/jquery-typeahead/dist/jquery.typeahead.min.js','public/js/frontend/jquery-typeahead.js');
 });
+elixir(function(mix) {
+     mix.scripts('frontend/filter.js', 'public/js/frontend/filter.js');
+});
+

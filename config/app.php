@@ -182,7 +182,8 @@ return [
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
-
+        Laravel\Cashier\CashierServiceProvider::class,
+        Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
     ],
 
     /*
@@ -232,6 +233,7 @@ return [
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
 
     ],
 

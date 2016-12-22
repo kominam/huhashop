@@ -7,6 +7,7 @@ use Cart;
 use App\Order;
 use AUth;
 
+
 class OrderController extends Controller
 {
     public function showHistory() 
@@ -15,7 +16,7 @@ class OrderController extends Controller
     	return view('frontend.pages.order_history', ['orders'=> $orders]);
     }
 
-    public function checkout() {
+    public function checkout(Request $request) {
     	$customer = Auth::user();
         //create order 
         $items = Cart::content();
@@ -28,7 +29,13 @@ class OrderController extends Controller
             $order->products()->attach([$item->id=>['quantity'=>$item->qty]]);
         }
         $order->save();
+        $total = $order->total + (($order->total/100)*100);
+        $customer->invoiceFor($order->id, $total, [
+            'currency' => 'vnd'
+            ]);
+       
         Cart::destroy();
+
         return redirect()->route('order-history')->with('StatusCheckOut','success');
     	
     }

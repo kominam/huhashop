@@ -25,7 +25,7 @@ Route::post('/contact',['as'=>'contact.send', 'uses' => 'ContactController@sendC
 Route::get('/shipping','PageController@shipping')->name('shipping');
 Route::get('/terms','PageController@term')->name('terms');
 
-Route::get('/offer', 'PageController@offer')->name('offer');
+Route::get('/all-product', 'PageController@all')->name('allProduct');
 
 Route::get('/your-cart','CartController@show')->name('your-cart');
 Route::post('your-cart/addItem', 'CartController@AddToCart')->name('addItem');
@@ -33,15 +33,16 @@ Route::get('/your-cart/removeItem/{rowId}', 'CartController@deleteItem')->name('
 Route::get('your-cart/removeAllItem', 'CartController@removeAll')->name('removeAllItem');
 Route::get('/your-cart/search/{productId}', 'CartController@search')->name('searchItem');
 Route::post('your-cart/update/{rowId}', 'CartController@update')->name('updateItem');
+Route::post('filter', 'SearchController@filter');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::group(['prefix' => 'my'], function () {
+Route::group(['prefix' => 'my','middleware' => 'auth'], function () {
     Route::get('logout', 'Auth\LogOutController@logout')->name('logout');
     Route::get('order-history', 'OrderController@showHistory')->name('order-history');
-    Route::get('checkout','OrderController@checkout')->name('checkout');
+    Route::post('checkout','OrderController@checkout')->name('checkout');
 
 });
 //Seach 

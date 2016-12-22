@@ -47,12 +47,11 @@
             <ul class="dropdown-menu multi">
               <div class="row">
               @foreach ($category->products->chunk(4) as $chunk)
-                                <div class="col-sm-3">
+                  <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                     @foreach ($chunk as $product)
                      <li><a href="{{route('product.show', ['slugProduct'=>$product->slug, 'slugCategory'=> $product->category->slug])}}"><i class="fa fa-angle-right" aria-hidden="true"></i>{{$product->name}}</a></li>
                     @endforeach
-                   </li>
 
                   </ul>
 

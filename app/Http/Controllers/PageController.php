@@ -27,9 +27,9 @@ class PageController extends Controller
     	return view('frontend.pages.shipping');
     }
 
-    public function offer()
+    public function all()
     {
-    	return view('frontend.pages.offer');
+    	return view('frontend.pages.all_product');
     }
     public function term()
     {

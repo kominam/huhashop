@@ -47,7 +47,8 @@ class Product extends Model
       return $this->belongsToMany('App\ComboSale');
    }
 
-  public function isAloneSaleNow() {
+  public function isAloneSaleNow() 
+  {
     $current_time = Carbon::now()->toDateString();
        foreach ($this->alone_sales as $alone_sale) {
         if ($alone_sale->began_at < $current_time && 
@@ -59,7 +60,8 @@ class Product extends Model
       return false;
   }
 
-  public function getRateAloneSaleNow() {
+  public function getRateAloneSaleNow() 
+  {
     if ($this->isAloneSaleNow()) {
           $current_time = Carbon::now()->toDateString();
        foreach ($this->alone_sales as $alone_sale) {
@@ -72,7 +74,8 @@ class Product extends Model
     }
   }
 
-  public function getCurrentPrice() {
+  public function getCurrentPrice() 
+  {
     $original_price = $this->price;
     if ($this->isAloneSaleNow()) {
       $discount_rate= $this->getRateAloneSaleNow()->rate;
@@ -86,12 +89,29 @@ class Product extends Model
     
   }
 
-  public function getIsHotAttribute($value) {
+  public function getIsHotAttribute($value) 
+  {
     if ( $value == 1 ) return true;
 
     return false;
     
   }
 
+  public function getIsNewAttribute($value) 
+  {
+    if ( $value == 1 ) return true;
 
+    return false;
+    
+  }
+
+  public function getUrlImageAttribute($value) 
+  {
+    return (config('upload.orgin_image_path').$value);
+  }
+
+  public function getZoomImageAttribute($value) 
+  {
+    return (config('upload.big_image_path').$value);
+  }
 }

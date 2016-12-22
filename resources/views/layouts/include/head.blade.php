@@ -1,6 +1,7 @@
 <head>
     <title>Huha Shop| Lavender Flower Shop</title>
     <!-- for-mobile-apps -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta property="og:title" content="Vide" />
@@ -35,7 +36,7 @@
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
     <!--- start-rate---->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     <link rel="stylesheet" href="{{url('frontend/css/jstarbox.css')}}" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
       jQuery(function() {

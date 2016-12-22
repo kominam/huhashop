@@ -15,6 +15,7 @@
                 <div class="col-m">
                 <a href="#" data-toggle="modal" data-target="#productModal{{$product->slug}}" class="offer-img">
                     <img src="{{url($product->url_image)}}" class="img-responsive" alt="">
+                      <div class="offer"><p><span>hot</span></p></div>
                   </a>
                   <div class="mid-1">
                     <div class="women">

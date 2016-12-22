@@ -62,7 +62,19 @@
     <td class="t-data">{{Cart::subtotal(0,'','') + ((Cart::subtotal(0,'','')/100)*10)}}</td>
     </tr>
   </table>
-    <a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver=gemini.wind285@gmail.com&product_name={{Auth::user()->name}}{{\Carbon\Carbon::now()}}&price={{Cart::subtotal(0,'','')}}&return_url=huhashop.com&comments=Test Order"><img src="https://www.nganluong.vn/css/newhome/img/button/pay-lg.png" border="0" width="150px" /></a>
+    <form action="{{ route('checkout') }}" method="POST">
+    {!! csrf_field() !!}
+    <input type="text" name="address">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_MoVxTydZUv9dvlhwisSt6CPK"
+    data-amount="{{Cart::subtotal(0,'','') + ((Cart::subtotal(0,'','')/100)*10)}}"
+    data-name="Huhashop"
+    data-description="Widget"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>
      </div>
      </div>
 

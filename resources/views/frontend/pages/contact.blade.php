@@ -69,8 +69,8 @@
                   <input type="email" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
                    <input type="text" value="Subject" name="subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
                   <textarea name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                  {!!captcha_img()!!}
-                  <input type="text" name="captcha" value="captcha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Captcha';}" required="">
+                  {!! Recaptcha::render() !!}
+               
                   <input type="submit" value="Submit" >
                 </form>
               </div>

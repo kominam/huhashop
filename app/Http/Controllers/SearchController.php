@@ -43,4 +43,13 @@ class SearchController extends Controller
          return redirect()->route('category.show',$category->slug);
       }       
    }
+
+   public function filter(Request $request) {
+    $category = $request->category;
+    $price = $request->price;
+    if ($category && $price) {
+       $results = Product::where('category_id', $category)->where('price', '<=', $price)->get();
+     }
+    return response()->json($results);
+   }
 }

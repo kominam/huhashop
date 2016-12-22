@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('is_hot')->default(0);
             $table->tinyInteger('is_shipping')->default(0);
             $table->string('url_image');
+            $table->string('image_zoom');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();

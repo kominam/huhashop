@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Product;
 use App\Category;
 use Auth;
+use Laravel\Cashier\Cashier;
 
 class ViewComposerServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,7 @@ class ViewComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Cashier::useCurrency('vnd', '₫');
         // Using class based composers...
         /*View::composer(
             'profile', 'App\Http\ViewComposers\ProfileComposer'

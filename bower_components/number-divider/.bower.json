@@ -1,0 +1,38 @@
+{
+  "name": "number-divider",
+  "homepage": "https://tyugaev.github.io/number-divider/",
+  "authors": [
+    "Mikhail Tyugaev <tugayev.m.v@gmail.com>"
+  ],
+  "description": "jQuery number divider plugin",
+  "main": "dist/number-divider.js",
+  "keywords": [
+    "jquery-plugin",
+    "separator",
+    "delimiter",
+    "divider",
+    "number"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "gulpfile.js",
+    "package.json",
+    "example.html"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.7.1"
+  },
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "ae67608e3211ef4829ce85c16e5213ced2efa175"
+  },
+  "_source": "https://github.com/tyugaev/jquery-number-divider.git",
+  "_target": "^1.0.0",
+  "_originalSource": "number-divider",
+  "_direct": true
+}

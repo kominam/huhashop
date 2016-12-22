@@ -1,14 +1,14 @@
 @extends('layouts.desktop')
 @section('content')
-    <!--banner-->
+<!-- faqs -->
+ <!--banner-->
 <div class="banner-top">
   <div class="container">
-    <h3 >About</h3>
+    <h3 >Contact</h3>
     <h4><a href="{{route('index')}}">Home</a><label>/</label>About</h4>
     <div class="clearfix"> </div>
   </div>
 </div>
-<!-- faqs -->
   <div class="about-w3 ">
       <!--about-->
       <div class="container">
@@ -26,7 +26,7 @@
       <img class="img-responsive" src="{{url('frontend/images/ab.jpg')}}" alt="">
       </div>
       <div class="col-md-4 about-left">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse laoreet sem sit amet dolor luctus pellentesque. Pellentesque eleifend tellus at interdum elementum. Nam egestas molestie elit. Vivamus sed accumsan quam, a mollis magna. Nam aliquet eros eget sapien consequat tincidunt at vel nibh. Duis ut turpis mi. Duis nec scelerisque urna, sit amet varius arcu. Aliquam aliquet sapien quis mauris semper suscipit. Maecenas pharetra dapibus posuere. Praesent odio sem.  </p>
+        <p>Shop is managed by people who are very dedicated and love Lavender. HuHa became my familiar sites as well as those who share a passion Lavender . Dry Lavender Shop supplying imported directly from the flower planting base in France. Besides HuHa shop also receive: Providing products such as essential oils from lavender, perfume, scented bags.Wholesale dried flowers Europe as barley, bunny tail, pararis, baby breath, broom bloom, hydrangeas, Salem, marinated commission. All kinds of flowers and the products are sold to the shop carefully cared to please most customers in HuHa. Lavender flowers with dark colored and flower shape in French-standard, you can be assured of origin through the eyes and distinction through the shape of flowers, cotton buds, color ...</p>
       </div>
       <div class="col-md-4 about-right">
       <img class="img-responsive" src="{{url('frontend/images/ab1.jpg')}}" alt="">
@@ -51,20 +51,20 @@
       <div class="work-info">
         <div class="col-md-6 work-left">
           <div class=" work-w3 ">
-            <h5> May 2012</h5>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo </p>
+            <h5> May 2014</h5>
+            <p>Huha lavernder was start from small shop at Nhan chinh, Thanh xuan ,Ha Noi on 5/11/2014 . The first state was meet many difficulties with location, customer and finance ability. But gradually shop get customer belief and continued grow up  </p>
           </div>
           <label></label>
         </div>
         <div class="col-md-6 work-right">
           <div class=" work-w31">
-            <h5> November 2012</h5>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo </p>
+            <h5> November 2015</h5>
+            <p>n the second state of rough stage we could extend the range of business to sale many kind of stock related lavender or handmade product. We also find a long term partner to provide high quality product with good price </p>
           </div>
           <label></label>
         </div>
         <div class="clearfix"> </div>
-        <span> 2012</span>
+        <span> 2014</span>
       </div>
       <div class="work-info">
         <div class="col-md-6 work-left">
@@ -82,7 +82,7 @@
           <label></label>
         </div>
         <div class="clearfix"> </div>
-        <span> 2013</span>
+        <span> 2015</span>
       </div>
       <div class="work-info">
         <div class="col-md-6 work-left">

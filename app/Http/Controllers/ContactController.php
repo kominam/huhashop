@@ -17,15 +17,15 @@ class ContactController extends Controller
                'email.required'=>'Enter the tittle for this post',
                'subject.unique'=>'This tittle is already existing',
                'message.required'=>'Enter the content for this post',
-               'captcha.required' => 'Enter the captcha',
-               'captcha.captcha' =>'Captcha not correct',
+               'g-recaptcha-response.required' => 'Enter the captcha',
+               'g-recaptcha-response.captcha' =>'Captcha not correct',
         ];
         $validator = Validator:: make($request->all(),[
               'name' => 'required',
               'email'=>'required|email',
               'subject'=>'required',
               'message'=>'required',
-              'captcha' => 'required|captcha'
+              'g-recaptcha-response' => 'required|recaptcha',
         ], $messages);
         $myEmail = 'huhashop@gmail.com';
         if ($validator->fails()) {
