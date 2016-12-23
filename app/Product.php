@@ -13,8 +13,7 @@ class Product extends Model
   use SluggableScopeHelpers;
 
   protected $table ='products';
-  protected $fillable = ['name', 'description', 'price', 'url_image'];
-  protected $guarded = ['category_id', 'combo_sale_id'];
+  protected $guarded = ['id'];
   public $timestamp = true;
 
     /**

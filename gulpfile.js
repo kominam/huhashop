@@ -48,5 +48,9 @@ elixir(function(mix) {
 });
 elixir(function(mix) {
      mix.scripts('frontend/filter.js', 'public/js/frontend/filter.js');
+     mix.copy('././bower_components/AdminLTE/dist/css', 'public/css/backend/css');
+      mix.copy('././bower_components/AdminLTE/boostrap', 'public/css/backend/boostrap');
+     mix.copy('././bower_components/AdminLTE/dist/js', 'public/js/backend/js');
+     mix.copy('././bower_components/AdminLTE/plugins', 'public/plugins/backend/plugins');
 });
 

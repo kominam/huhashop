@@ -64,7 +64,6 @@
   </table>
     <form action="{{ route('checkout') }}" method="POST">
     {!! csrf_field() !!}
-    <input type="text" name="address">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_MoVxTydZUv9dvlhwisSt6CPK"

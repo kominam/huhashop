@@ -45,10 +45,31 @@ Route::group(['prefix' => 'my','middleware' => 'auth'], function () {
     Route::post('checkout','OrderController@checkout')->name('checkout');
 
 });
+
 //Seach 
 Route:: get('json/product' , ['as'=>'all-product-json','uses'=>'SearchController@index']);
 Route:: get('result-for/{type}/{name}', ['as' => 'search', 'uses' => 'SearchController@showResult']);
 
+
+Route::get('/admin/login', 'AdminAuth\LoginController@showLoginForm');
+Route::post('/admin/login', 'AdminAuth\LoginController@login');
+Route::get('/admin/logout', 'AdminAuth\LogOutController@logout')->name('admin.logout');
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+	Route::get('/','AdminController@index')->name('admin.index');
+	Route::get('/category', 'CategoryController@index')->name('admin.category.index');
+	Route::post('/category', 'CategoryController@store')->name('admin.category.store');
+	Route::put('/category/{slug}/edit', 'CategoryController@update')->name('admin.category.update');
+	Route::get('/category/{slug}/delete', 'CategoryController@destroy')->name('admin.category.delete');
+	Route::get('/product', 'ProductController@index')->name('admin.product.index');
+	Route::post('/product', 'ProductController@store')->name('admin.product.store');
+	Route::put('/product/{slug}/edit', 'ProductController@update')->name('admin.product.update');
+	Route::get('/product/{slug}/delete', 'ProductController@destroy')->name('admin.product.delete');
+	Route::get('/order', 'OrderController@index')->name('admin.order.index');
+	Route::get('/order/{id}', 'OrderController@show')->name('admin.order.show');
+
+
+
+});
 Route::get('/{slugCategory}/{slugProduct}', 'ProductController@show')->name('product.show');
 Route::get('/{slugCategory}', 'CategoryController@show')->name('category.show');
 /*Route::get('/care', ['as' => 'care', function () {
