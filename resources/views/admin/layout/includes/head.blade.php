@@ -15,5 +15,4 @@
     @stack('style')
     @stack('js-head')
     @stack('script-head')
-    
 </head>

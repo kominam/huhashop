@@ -5,10 +5,12 @@
 <noscript>
 	Your script is turn off.Turn it on browser setting
 </noscript>
+<div class="wrapper">
 @include('admin.layout.includes.header')
 @include('admin.layout.includes.sidebar')
 @yield('content')
 @include('admin.layout.includes.footer')
 @include('admin.layout.includes.script')
+</div>
 </body>
 </html>

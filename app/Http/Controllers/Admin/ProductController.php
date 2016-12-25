@@ -7,6 +7,7 @@ use App\Product;
 use File;
 use Illuminate\Http\Request;
 use Validator;
+use App\AloneSale;
 
 class ProductController extends Controller
 {
@@ -124,7 +125,7 @@ class ProductController extends Controller
     {
         $product = Product::findBySlugOrFail($slug);
         $rules = [
-            'name'        => 'required|unique:products,name,'.$product->slug,
+            'name'        => 'required|unique:products,name,'.$product->id,
             'price'       => 'required|min:0',
             'unit'        => 'required',
             'description' => 'required',
@@ -198,6 +199,16 @@ class ProductController extends Controller
         if ($product) {
             $product->delete();
             return redirect()->route('admin.product.index')->with('statusDeleteProduct', 'success');
+        }
+    }
+
+
+    public function markAsSaleFromNow(Request $request, $slug)
+    {
+       $product = Product::findBySlugOrFail($slug);
+        if ($product) {
+           $alone_sale = AloneSale::create($request->all());
+            return redirect()->route('admin.product.index')->with('statusCreateEvent', 'success');
         }
     }
 }

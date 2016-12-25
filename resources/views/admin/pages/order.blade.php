@@ -59,7 +59,7 @@
                         </td>
                         <td>
                            <a href="{{ route('admin.order.show', $order->id) }}" class="btn btn-info pull-right" style="margin-right: 5px;">
-                           <i class="fa fa-trash">
+                           <i class="fa fa-info">
                            </i>
                            Detail
                            </a>

@@ -66,6 +66,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
 	Route::get('/product/{slug}/delete', 'ProductController@destroy')->name('admin.product.delete');
 	Route::get('/order', 'OrderController@index')->name('admin.order.index');
 	Route::get('/order/{id}', 'OrderController@show')->name('admin.order.show');
+	Route::post('product/{slug}/event', 'ProductController@markAsSaleFromNow')->name('admin.alone_sale.store');
+	Route::get('/stock', 'StockController@index')->name('admin.stock.index');
+	Route::post('/stock', 'StockController@store')->name('admin.stock.store');
+	Route::put('/stock/{id}/update','StockController@update')->name('admin.stock.update');
+	Route::get('stock/{id}/delete','StockController@destroy')->name('admin.stock.delete');
 
 
 

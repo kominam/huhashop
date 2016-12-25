@@ -1,6 +1,6 @@
 @extends('layouts.desktop')
 @section('content')
-  @include('frontend._references.slide')
+ @include('frontend._references.slide')
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 <script src="{{url('frontend/js/jquery.vide.min.js')}}"></script>
 @include('frontend._references.index.offer')

@@ -7,7 +7,7 @@
 
    <link rel="stylesheet" href="{{ asset('plugins/backend/plugins/iCheck/flat/blue.css') }}">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="{{ asset('plugins/backend/plugins/morris/morris.css') }}"
+  <link rel="stylesheet" href="{{ asset('plugins/backend/plugins/morris/morris.css') }}">
   @endpush
 @extends('admin.layout.master')
 @section('content')

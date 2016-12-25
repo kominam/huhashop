@@ -2,7 +2,7 @@
 @section('content')
   <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 30px">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -43,62 +43,7 @@
             @endforeach
     </div>
             <div class=" con-w3l wthree-of">
-            <script type="text/javascript">
-              $(document).ready(function() {
-                  $.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-function excuteFilter(category, price)
-  {
-    $.ajax({
-    url: '/filter',
-    type:'POST',
-    data:{category: category, price:price },
-    success: function(responses){
-      $('#listPorudct').empty();
-     $.each( responses, function( key, value ) {
-      var newPoroduct = '<div class="col-md-3 pro-1">'+
-
-                '<div class="col-m">'+
-               '<a href="#" data-toggle="modal" data-target="productModal'+ value.name +'" class="offer-img">' +
-                    '<img src="'+ value.url_image +'" class="img-responsive" alt="">'+
-                  '</a>'+
-                  '<div class="mid-1">'+
-                    '<div class="women">' + 
-                      '<h6><a href="single.html">'+ value.name +'</a>' + value.unit +'</h6>' +
-                    '</div>' +
-                    '<div class="mid-2">'+
-                      '<p ><label>' + value.price + '</label><em class="item_price">' + value.price + '</em></p>'+
-                        '<div class="block">'+
-                        '<div class="starbox small ghosting">' + '</div>' +
-                      '</div>' +
-                      '<div class="clearfix"></div>' +
-                    '</div>' +
-                      '<div class="add add-2">'+
-                      '<button class="btn btn-danger my-cart-btn my-cart-b " data-id="' + value.id +'" data-name="'+value.name+'" data-summary="summary '+ value.id +'" data-price="'+ value.price+'" data-quantity="1" data-image="'+ value.url_image+'">Add to Cart</button>'+
-                   '</div>' +
-                  '</div>' +
-                '</div>' +
-            '</div>';
-                     $('#listPorudct').prepend(newPoroduct);
-
-});
-    }
-  });
-  }  
-  $('input[type=radio][name=myCategory]').change(function() {
-      var category = this.value;
-  $("input[type=range][name=price]").change(function(){
-          var price=  $("input[type=range][name=price]").val();
-          excuteFilter(category,price);
-        });
-    });
-
-  
-});
-            </script>
+           <script src=" {{ asset('js/frontend/filter.js') }}"></script>
          <div id="listPorudct">
             @foreach ($all_products as $product)
                @if ( $product->is_hot )
@@ -110,7 +55,7 @@ function excuteFilter(category, price)
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="single.html">{{$product->name}}</a>({{$product->unit}})</h6>
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$product->slug, 'slugCategory'=> $product->category->slug]) }}" >{{$product->name}}</a>({{$product->unit}})</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>{{$product->price}}</label><em class="item_price">{{$product->getCurrentPrice()}}</em></p>
@@ -134,7 +79,7 @@ function excuteFilter(category, price)
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="single.html">{{$product->name}}</a>({{$product->unit}})</h6>
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$product->slug, 'slugCategory'=> $product->category->slug]) }} ">{{$product->name}}</a>({{$product->unit}})</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>{{$product->price}}</label><em class="item_price">{{$product->getCurrentPrice()}}</em></p>
@@ -158,7 +103,7 @@ function excuteFilter(category, price)
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="single.html">{{$product->name}}</a>({{$product->unit}})</h6>
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$product->slug, 'slugCategory'=> $product->category->slug]) }}">{{$product->name}}</a>({{$product->unit}})</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>{{$product->price}}</label><em class="item_price">{{$product->getCurrentPrice()}}</em></p>
@@ -181,7 +126,7 @@ function excuteFilter(category, price)
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="single.html">{{$product->name}}</a>({{$product->unit}})</h6>
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$product->slug, 'slugCategory'=> $product->category->slug]) }} ">{{$product->name}}</a>({{$product->unit}})</h6>
                     </div>
                     <div class="mid-2">
                       <p ><label>{{$product->price}}</label><em class="item_price">{{$product->getCurrentPrice()}}</em></p>

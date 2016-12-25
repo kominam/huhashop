@@ -1,7 +1,7 @@
 @extends('layouts.desktop')
 @section('content')
  <!--banner-->
-<div class="banner-top">
+<div class="banner-top" style="margin-top: 30px">
   <div class="container">
     <h3 >Lorem</h3>
     <h4><a href="{{route('index')}}">Home</a><label>/</label>Lorem</h4>
@@ -69,42 +69,102 @@
       </div>
             <div class=" con-w3l wthree-of">
             @foreach ($related_products as $r_product)
-                <div class="col-md-3 pro-1">
+                @if ( $r_product->is_hot )
+           <div class="col-md-3 pro-1">
                 <div class="col-m">
-                  <a href="#" data-toggle="modal" data-target="#productModal{{$product->slug}}" class="offer-img">
+                <a href="#" data-toggle="modal" data-target="#productModal{{$r_product->slug}}" class="offer-img">
                     <img src="{{url($r_product->url_image)}}" class="img-responsive" alt="">
-                    @if( $r_product->isAloneSaleNow() )
-                     <div class="offer"><p><span>{{$product->getRateAloneSaleNow()->rate}} %</span></p></div>
-                    @else
-                       @if($r_product->is_hot==1)
-                         <div class="offer"><p><span>Hot</span></p></div>
-                        @elseif($r_product->is_new==1)
-                         <div class="offer"><p><span>New</p></div>
-                        @endif
-                    @endif
-                   
+                      <div class="offer"><p><span>hot</span></p></div>
+                  </a>
+                  <div class="mid-1">
+                    <div class="women">
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$r_product->slug, 'slugCategory'=> $r_product->category->slug]) }}" >{{$r_product->name}}</a>({{$r_product->unit}})</h6>
+                    </div>
+                    <div class="mid-2">
+                      <p ><label>{{$r_product->price}}</label><em class="item_price">{{$r_product->getCurrentPrice()}}</em></p>
+                        <div class="block">
+                        <div class="starbox small ghosting"> </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                      <div class="add add-2">
+                      <button class="btn btn-danger my-cart-btn my-cart-b " data-id="{{$r_product->id}}" data-name="{{$r_product->name}}" data-summary="summary {{$r_product->id}}" data-price="{{$r_product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($r_product->url_image)}}">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        @elseif($r_product->is_new)
+         <div class="col-md-3 pro-1">
+                <div class="col-m">
+                <a href="#" data-toggle="modal" data-target="#productModal{{$r_product->slug}}" class="offer-img">
+                    <img src="{{url($r_product->url_image)}}" class="img-responsive" alt="">
+                      <div class="offer"><p><span>new</span></p></div>
+                  </a>
+                  <div class="mid-1">
+                    <div class="women">
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$r_product->slug, 'slugCategory'=> $r_product->category->slug]) }} ">{{$r_product->name}}</a>({{$r_product->unit}})</h6>
+                    </div>
+                    <div class="mid-2">
+                      <p ><label>{{$r_product->price}}</label><em class="item_price">{{$r_product->getCurrentPrice()}}</em></p>
+                        <div class="block">
+                        <div class="starbox small ghosting"> </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                      <div class="add add-2">
+                      <button class="btn btn-danger my-cart-btn my-cart-b " data-id="{{$r_product->id}}" data-name="{{$r_product->name}}" data-summary="summary {{$r_product->id}}" data-price="{{$r_product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($r_product->url_image)}}">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        @elseif($r_product->isAloneSaleNow())
+         <div class="col-md-3 pro-1">
+                <div class="col-m">
+                <a href="#" data-toggle="modal" data-target="#productModal{{$r_product->slug}}" class="offer-img">
+                    <img src="{{url($r_product->url_image)}}" class="img-responsive" alt="">
+                      <div class="offer"><p><span>-{{$r_product->getRateAloneSaleNow()->rate}} %</span></p></div>
                   </a>
                   <div class="mid-1">
                     <div class="women">
                       <h6><a href="{{ route('product.show', ['slugProduct'=>$r_product->slug, 'slugCategory'=> $r_product->category->slug]) }}">{{$r_product->name}}</a>({{$r_product->unit}})</h6>
                     </div>
                     <div class="mid-2">
-                       @if($r_product->isAloneSaleNow())
-                          <p ><label>VND {{$r_product->price}}</label><em class="item_price">VND {{$r_product->getCurrentPrice()}}</em></p>
-                       @else
-                        <p ><em class="item_price">VND {{$r_product->getCurrentPrice()}}</em></p>
-                       @endif
+                      <p ><label>{{$r_product->price}}</label><em class="item_price">{{$r_product->getCurrentPrice()}}</em></p>
                         <div class="block">
                         <div class="starbox small ghosting"> </div>
                       </div>
                       <div class="clearfix"></div>
                     </div>
-                      <div class="add">
-                       <button class="btn btn-danger my-cart-btn my-cart-b" data-id="{{$r_product->id}}" data-name="{{$r_product->name}}" data-summary="summary {{$r_product->id}}" data-price="{{$r_product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($r_product->url_image)}}">Add to Cart</button>
+                      <div class="add add-2">
+                      <button class="btn btn-danger my-cart-btn my-cart-b " data-id="{{$r_product->id}}" data-name="{{$r_product->name}}" data-summary="summary {{$r_product->id}}" data-price="{{$r_product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($r_product->url_image)}}">Add to Cart</button>
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
+        @else
+         <div class="col-md-3 pro-1">
+                <div class="col-m">
+                <a href="#" data-toggle="modal" data-target="#productModal{{$r_product->slug}}" class="offer-img">
+                    <img src="{{url($r_product->url_image)}}" class="img-responsive" alt="">
+                  </a>
+                  <div class="mid-1">
+                    <div class="women">
+                      <h6><a href="{{ route('product.show', ['slugProduct'=>$r_product->slug, 'slugCategory'=> $r_product->category->slug]) }} ">{{$r_product->name}}</a>({{$r_product->unit}})</h6>
+                    </div>
+                    <div class="mid-2">
+                      <p ><label>{{$r_product->price}}</label><em class="item_price">{{$r_product->getCurrentPrice()}}</em></p>
+                        <div class="block">
+                        <div class="starbox small ghosting"> </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                      <div class="add add-2">
+                      <button class="btn btn-danger my-cart-btn my-cart-b " data-id="{{$r_product->id}}" data-name="{{$r_product->name}}" data-summary="summary {{$r_product->id}}" data-price="{{$r_product->getCurrentPrice()}}" data-quantity="1" data-image="{{url($r_product->url_image)}}">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            @endif
             @endforeach
             
               <div class="clearfix"></div>

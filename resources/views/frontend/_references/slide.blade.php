@@ -1,4 +1,4 @@
-<div data-vide-bg="{{ asset('/frontend/video/video') }}" style="margin-top: 70px">
+<div data-vide-bg="{{ asset('frontend/video/video') }}" style="margin-top: 70px">
     <div class="container">
     <div class="banner-info">
       <h3>Forgiveness is the smell that lavender gives out when you tread on it </h3>

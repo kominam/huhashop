@@ -2,7 +2,7 @@
 @section('content')
 <!-- faqs -->
  <!--banner-->
-<div class="banner-top">
+<div class="banner-top" style="margin-top: 30px">
   <div class="container">
     <h3 >Contact</h3>
     <h4><a href="{{route('index')}}">Home</a><label>/</label>About</h4>

@@ -1,7 +1,7 @@
 @extends('layouts.desktop')
 @section('content')
 <!--banner-->
-<div class="banner-top">
+<div class="banner-top" style="margin-top: 30px">
 	<div class="container">
 		<h3 >Shipping</h3>
 		<h4><a href="index.html">Home</a><label>/</label>Shipping</h4>
