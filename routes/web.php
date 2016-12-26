@@ -38,11 +38,17 @@ Route::post('filter', 'SearchController@filter');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+//Social Login
+Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
+Route::get('/callback/{provider}', 'SocialAuthController@callback');
 
 Route::group(['prefix' => 'my','middleware' => 'auth'], function () {
     Route::get('logout', 'Auth\LogOutController@logout')->name('logout');
     Route::get('order-history', 'OrderController@showHistory')->name('order-history');
     Route::post('checkout','OrderController@checkout')->name('checkout');
+    Route::get('/user/info',function(){
+    	return view('frontend.pages.user_info');
+    })->name('user.info');
 
 });
 
@@ -71,9 +77,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
 	Route::post('/stock', 'StockController@store')->name('admin.stock.store');
 	Route::put('/stock/{id}/update','StockController@update')->name('admin.stock.update');
 	Route::get('stock/{id}/delete','StockController@destroy')->name('admin.stock.delete');
-
-
-
+	Route::get('/mark-as-sent/{id}', 'OrderController@markAsSent')->name('admin.order.sent');
 });
 Route::get('/{slugCategory}/{slugProduct}', 'ProductController@show')->name('product.show');
 Route::get('/{slugCategory}', 'CategoryController@show')->name('category.show');

@@ -31,7 +31,7 @@
                            Order ID
                         </th>
                          <th aria-controls="example1" aria-label="Browser: activate to sort column ascending" class="sorting" colspan="1" rowspan="1" style="width: 170px;" tabindex="0">
-                           Total
+                           Total 
                         </th>
                         <th aria-controls="example1" aria-label="Task : activate to sort column ascending" class="sorting" colspan="1" rowspan="1" style="width: 148px;" tabindex="0">
                            Detail
@@ -61,8 +61,13 @@
                            <a href="{{ route('admin.order.show', $order->id) }}" class="btn btn-info pull-right" style="margin-right: 5px;">
                            <i class="fa fa-info">
                            </i>
-                           Detail
                            </a>
+                           @if (!$order->is_sent )
+                           <a href="{{ route('admin.order.sent', $order->id) }}" class="btn btn-success pull-right" style="margin-right: 5px;">
+                           <i class="fa fa-check">
+                           </i>
+                           </a>
+                           @endif
                         </td>
                         <td>
                            {{$order->created_at->diffForHumans()}}
@@ -82,6 +87,9 @@
                         </th>
                          <th colspan="1" rowspan="1">
                            Total
+                        </th>
+                        <th colspan="1" rowspan="1">
+                           Detail
                         </th>
                         <th colspan="1" rowspan="1">
                            Trasnactionad At

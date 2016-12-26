@@ -34,5 +34,14 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+      'facebook' => [
+        'client_id' => '1121957584520731',
+        'client_secret' => '6558ce6e0d85724609e76007b3391145',
+        'redirect' => 'http://huhashop.com/callback/facebook',
+    ],
+     'google' => [
+        'client_id' => '1075950616387-kora4s1nldktmlc7vdhm7cu7lfev6u73.apps.googleusercontent.com',
+        'client_secret' => 'CPn1bKrHqHNWuPRxXWwffKfd',
+        'redirect' => 'http://huhashop.com/callback/google',
+    ],
 ];

@@ -184,6 +184,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
         Greggilbert\Recaptcha\RecaptchaServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -234,6 +235,7 @@ return [
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Recaptcha' => Greggilbert\Recaptcha\Facades\Recaptcha::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

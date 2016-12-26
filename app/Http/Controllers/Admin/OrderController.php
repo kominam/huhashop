@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Order;
+use Mail;
+use App\Mail\OrderCompleteMail;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
@@ -84,5 +86,17 @@ class OrderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function markAsSent($id)
+    {
+        $order = Order::find($id);
+        if ($order) {
+            $order->is_sent = 1;
+            $order->save();
+            Mail::to($order->user->email)->send(new OrderCompleteMail($order));
+            return redirect()->route('admin.order.index')->with('statusMarkAsSent', 'success');
+        }
+        return back();
     }
 }

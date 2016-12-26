@@ -62,9 +62,21 @@
     <td class="t-data">{{Cart::subtotal(0,'','') + ((Cart::subtotal(0,'','')/100)*10)}}</td>
     </tr>
   </table>
-    <form action="{{ route('checkout') }}" method="POST">
+    <form action="{{ route('checkout') }}" method="POST" role="form">
     {!! csrf_field() !!}
-  <script
+    <div class="form-group">
+        <label>Receiver Name</label>
+        <input type="text" name="name" class="form-control" required="">
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="address" class="form-control" required="">
+    </div>
+     <div class="form-group">
+        <label>Telephone</label>
+        <input type="text" name="telephone" class="form-control" required="">
+    </div>
+<script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_MoVxTydZUv9dvlhwisSt6CPK"
     data-amount="{{Cart::subtotal(0,'','') + ((Cart::subtotal(0,'','')/100)*10)}}"

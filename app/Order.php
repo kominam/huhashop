@@ -27,4 +27,16 @@ class Order extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function shipping_info()
+    {
+        return $this->hasOne('App\ShippingInfo');
+    }
+
+    public function getIsSentAttribute($value)
+    {
+        if ( $value==0 )
+            return false;
+        return true;
+    }
 }
