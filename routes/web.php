@@ -49,6 +49,7 @@ Route::group(['prefix' => 'my','middleware' => 'auth'], function () {
     Route::get('/user/info',function(){
     	return view('frontend.pages.user_info');
     })->name('user.info');
+    Route::post('/change-password','CustomerController@changePassword')->name('customer.change-password');
 
 });
 
